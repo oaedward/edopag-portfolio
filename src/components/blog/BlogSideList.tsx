@@ -13,11 +13,11 @@ export default async function BlogSideList() {
 `;
   const posts = await client.fetch(query);
   return (
-    <div class="mt-8 lg:w-1/4 lg:mt-0 lg:px-6">
+    <div className="mt-8 lg:w-1/4 lg:mt-0 lg:px-6">
       {posts.map((post) => (
         <>
           <div key={post._id}>
-            <h3 class="text-gray-500 text-sm capitalize">
+            <h3 className="text-gray-500 text-sm capitalize">
               {new Date(post._createdAt).toLocaleDateString("en-UK", {
                 day: "numeric",
                 month: "long",
@@ -27,8 +27,7 @@ export default async function BlogSideList() {
 
             <ClientSideRoute
               route={`/blog/post/${post.slug}`}
-              class="block mt-2"
-              key={post._id}
+              className="block mt-2"
             >
               <h1 className="font-medium text-gray-600 hover:underline hover:text-gray-500 dark:text-gray-400">
                 {post.title}
@@ -36,7 +35,7 @@ export default async function BlogSideList() {
             </ClientSideRoute>
           </div>
 
-          <hr class="my-6 border-gray-200 dark:border-gray-700" />
+          <hr className="my-6 border-gray-200 dark:border-gray-700" />
         </>
       ))}
     </div>
