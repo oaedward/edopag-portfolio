@@ -3,6 +3,7 @@ import "@/app/globals.css";
 import Navbar from "@/components/ui/navbar/Navbar";
 import Providers from "@/app/Providers";
 import Footer from "@/components/ui/footer/Footer";
+import LayoutComp from "@/components/LayoutComp";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -25,7 +26,7 @@ export default function RootLayout({
       <body className="bg-gray-50 dark:bg-gray-900">
         <Providers>
           <Navbar />
-          <div className="max-w-7xl mx-auto">{children}</div>
+          <LayoutComp>{children}</LayoutComp>
           <Footer />
         </Providers>
       </body>

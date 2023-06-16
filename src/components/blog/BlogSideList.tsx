@@ -28,6 +28,7 @@ export default async function BlogSideList() {
             <ClientSideRoute
               route={`/blog/post/${post.slug}`}
               class="block mt-2"
+              key={post._id}
             >
               <h1 className="font-medium text-gray-600 hover:underline hover:text-gray-500 dark:text-gray-400">
                 {post.title}
