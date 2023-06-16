@@ -15,7 +15,7 @@ export default async function BlogLatest() {
     } | order(_createdAt desc)
   `;
 
-  const posts = await client.fetch(query);
+  const posts = await client.fetch<Post[]>(query);
   return (
     <>
       <section

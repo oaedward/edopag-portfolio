@@ -10,7 +10,6 @@ import { deskTool } from "sanity/desk";
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
 import { apiVersion, dataset, projectId } from "./sanity/env";
 import { schema } from "./sanity/schema";
-import { myTheme } from "./theme";
 import StudioLogo from "./src/components/studio/logo/StudioLogo";
 
 export default defineConfig({
@@ -34,5 +33,4 @@ export default defineConfig({
       logo: StudioLogo,
     },
   },
-  theme: myTheme,
 });

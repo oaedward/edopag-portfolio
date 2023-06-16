@@ -11,7 +11,7 @@ export default async function BlogSideList() {
     "slug": slug.current
   } | order(_createdAt desc)
 `;
-  const posts = await client.fetch(query);
+  const posts = await client.fetch<Post[]>(query);
   return (
     <div className="mt-8 lg:w-1/4 lg:mt-0 lg:px-6">
       {posts.map((post) => (
@@ -25,13 +25,12 @@ export default async function BlogSideList() {
               })}
             </h3>
 
-            <ClientSideRoute
-              route={`/blog/post/${post.slug}`}
-              className="block mt-2"
-            >
-              <h1 className="font-medium text-gray-600 hover:underline hover:text-gray-500 dark:text-gray-400">
-                {post.title}
-              </h1>
+            <ClientSideRoute route={`/blog/post/${post.slug}`}>
+              <div className="block mt-">
+                <h1 className="font-medium text-gray-600 hover:underline hover:text-gray-500 dark:text-gray-400">
+                  {post.title}
+                </h1>
+              </div>
             </ClientSideRoute>
           </div>
 
