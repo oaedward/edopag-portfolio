@@ -1,7 +1,7 @@
 import { draftMode } from "next/headers";
 import { groq } from "next-sanity";
 import { client } from "@/lib/sanity.client";
-import BlogList from "@/components/blog/BlogList.tsx";
+import BlogList from "@/components/blog/BlogList";
 import BlogHeader from "@/components/blog/BlogHeader";
 import PreviewSuspense from "@/components/studio/PreviewSuspense";
 import PreviewBlogList from "@/components/studio/PreviewBlogList";
@@ -15,6 +15,8 @@ const query = groq`
     "slug": slug.current
   } | order(_createdAt desc)
 `;
+
+export const revalidate = 30;
 
 export default async function page() {
   const { isEnabled } = draftMode();
