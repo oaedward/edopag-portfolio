@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .stackIcon {
+    @apply w-10 h-10 inline-flex items-center justify-center transition-all cursor-pointer duration-200
+  }
+}
