@@ -85,7 +85,7 @@ export default async function Post({ params: { slug } }: Props) {
             </div>
             <PortableText value={post.body} components={RichTextComponent} />
             <div className="flex flex-wrap gap-2 mt-4">
-              {post.categories.map((category) => {
+              {post.categories?.map((category) => {
                 return (
                   <div
                     key={post._id}

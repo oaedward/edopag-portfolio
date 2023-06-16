@@ -71,7 +71,7 @@ export default function BlogList({ posts }: Props) {
                     </div>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {post.categories.map((category) => {
+                    {post.categories?.map((category) => {
                       return (
                         <div
                           key={post._id}
