@@ -22,7 +22,7 @@ export default function Social() {
       </a>
 
       <a
-        href="https://www.linkedin.com/in/edward-opoku-agyemang-1b406b75"
+        href="https://www.https://www.linkedin.com/in/ing-edward-opoku-agyemang-pe-ghie-1b406b75/"
         className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-800 dark:hover:text-blue-600"
         aria-label="LinkedIn"
         target="_blank"
